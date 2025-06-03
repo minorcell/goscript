@@ -22,6 +22,46 @@ func Reduce(slice []interface{}, initialValue interface{}, reducer func(interfac
 	return packages.Reduce(slice, initialValue, reducer)
 }
 
+// Max 返回切片中的最大值
+func Max(slice []interface{}) interface{} {
+	return packages.Max(slice)
+}
+
+// Min 返回切片中的最小值
+func Min(slice []interface{}) interface{} {
+	return packages.Min(slice)
+}
+
+// Splice 替换切片中的元素，返回替换后的切片，不对原切片进行修改
+func Splice(slice []interface{}, start int, deleteCount int, items ...interface{}) []interface{} {
+	return packages.Splice(slice, start, deleteCount, items...)
+}
+
+// Slice 返回切片的子切片，不对原切片进行修改
+func Slice(slice []interface{}, start int, end int) []interface{} {
+	return packages.Slice(slice, start, end)
+}
+
+// Replace 替换切片中的元素，返回替换后的切片，不对原切片进行修改
+func Replace(slice []interface{}, old interface{}, new interface{}) []interface{} {
+	return packages.Replace(slice, old, new)
+}
+
+// SortNumber 对切片进行排序，返回排序后的切片，不对原切片进行修改
+func SortNumber(slice []interface{}, compare func(interface{}, interface{}) bool) []interface{} {
+	return packages.SortNumber(slice, compare)
+}
+
+// SortStruct 对结构体切片进行排序，返回排序后的切片，不对原切片进行修改
+func SortStruct(slice []interface{}, compare func(interface{}, interface{}) bool) []interface{} {
+	return packages.SortStruct(slice, compare)
+}
+
+// SortString 对字符串切片进行排序，返回排序后的切片，不对原切片进行修改
+func SortString(slice []interface{}, compare func(interface{}, interface{}) bool) []interface{} {
+	return packages.SortString(slice, compare)
+}
+
 // 字符串操作函数
 // ----------------------------
 
